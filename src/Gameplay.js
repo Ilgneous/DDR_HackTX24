@@ -447,22 +447,22 @@ let tolerance = 100;
 document.addEventListener('keydown', (event) => {
     // console.log("event", event.key);
     // console.log("channel1Pressed", channel1Pressed);
-    if (event.key === '1' && channelFirst === true) {
+    if (greenLeft && channelFirst === true) {
         channel1Pressed = true;
         channelFirst = false;
         setTimeout(() => { channel1Pressed = false; }, 100);
     }
-    if (event.key === '2' && channel2First === true) {
+    if (blueLeft && channel2First === true) {
         channel2Pressed = true;
         channel2First = false;
         setTimeout(() => { channel2Pressed = false; }, 100);
     }
-    if (event.key === '3' && channel3First === true) {
+    if (blueRight && channel3First === true) {
         channel3Pressed = true;
         channel3First = false;
         setTimeout(() => { channel3Pressed = false; }, 100);
     }
-    if (event.key === '4' && channel4First === true) {
+    if (greenRight && channel4First === true) {
         channel4Pressed = true;
         channel4First = false;
         setTimeout(() => { channel4Pressed = false; }, 100);
@@ -498,10 +498,11 @@ const checkHitDetection = (() => {
             const channelWidth = plane.geometry.parameters.width / NUM_CHANNELS
             const channel = Math.floor((arrow.position.x + plane.geometry.parameters.width / 2) / channelWidth)
 
-            if ((channel1Pressed && channel === 1) || 
-                (channel2Pressed && channel === 2) || 
-                (channel3Pressed && channel === 3) || 
-                (channel4Pressed && channel === 4)) {
+            // Flip left and right in order to correspond to the correct channel shown to user
+            if ((window.detectionStatus.greenLeft && channel === 1) || 
+                (window.detectionStatus.blueLeft && channel === 2) || 
+                (window.detectionStatus.blueRight && channel === 3) || 
+                (window.detectionStatus.greenRight && channel === 4)) {
                 
                 let pos = arrow.position.clone()
                 pos.x = pos.x - 1
