@@ -1,0 +1,19 @@
+{
+  "name": "hacktx2024",
+  "version": "1.0.0",
+  "main": "detection.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@techstark/opencv-js": "^4.10.0-release.1",
+    "opencv.js": "^1.2.1",
+    "vite": "^5.4.10"
+  },
+  "description": ""
+}
