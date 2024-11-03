@@ -3972,8 +3972,8 @@ const camera = new THREE.PerspectiveCamera(100, sizes.width / sizes.height)
 camera.position.z = 3
 scene.add(camera)
 
-const controls = new OrbitControls(camera, canvas)
-controls.enableDamping = true
+// const controls = new OrbitControls(camera, canvas)
+// controls.enableDamping = true
 
 /**
  * Renderer
@@ -4120,15 +4120,13 @@ scene.add(plane);
 
 
 
-// Set initial cube position
-cube.position.y = plane.position.y + spawnDistance * Math.cos(planeAngle);
-cube.position.z = plane.position.z + spawnDistance * -Math.sin(planeAngle);
-scene.add(cube);
+// // Set initial cube position
+// cube.position.y = plane.position.y + spawnDistance * Math.cos(planeAngle);
+// cube.position.z = plane.position.z + spawnDistance * -Math.sin(planeAngle);
+// scene.add(cube);
 
 
 const NUM_CHANNELS = 4;
-
-
 let score = 0;
 
 
@@ -4746,7 +4744,7 @@ async function osu() {
 
 
 const tick = () => {
-    controls.update();
+    // controls.update();
     renderer.render(scene, camera);
 
     const elapsedTime = clock.getElapsedTime()
