@@ -1,3 +1,12 @@
+// Detection status object accessible globally
+window.detectionStatus = {
+    greenLeft: false,
+    greenRight: false,
+    blueLeft: false,
+    blueRight: false
+};
+
+
 function onVideoLoaded() {
     let video = document.getElementById('videoInput');
     let canvasOutput = document.getElementById('canvasOutput');
@@ -94,6 +103,8 @@ function onVideoLoaded() {
 
                 // Check if any contours are detected in ROI
                 let objectDetected = contours.size() > 10;
+                window.detectionStatus[key] = objectDetected; // Update global detection status object
+
                 //console.log(`${key} object detected: ${objectDetected}`);
 
                 // Draw rectangle on original frame based on detection status
