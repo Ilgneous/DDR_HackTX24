@@ -1,0 +1,86 @@
+{
+    "row1":{
+        "timing": 500,
+        "red": false,
+        "blue": false,
+        "green": true,
+        "pink": false
+    },
+    "row2":{
+        "timing": 1000,
+        "red": false,
+        "blue": false,
+        "green": false,
+        "pink": true
+    },
+    "row3":{
+        "timing": 1125,
+        "red": false,
+        "blue": false,
+        "green": false,
+        "pink": true
+    },
+    "row4":{
+        "timing": 1250,
+        "red": false,
+        "blue": false,
+        "green": true,
+        "pink": false
+    },
+    "row5":{
+        "timing": 1500,
+        "red": false,
+        "blue": true,
+        "green": false,
+        "pink": false
+    },
+    "row6":{
+        "timing": 1750,
+        "red": true,
+        "blue": false,
+        "green": false,
+        "pink": false
+    },
+    "row7":{
+        "timing": 2000,
+        "red": false,
+        "blue": false,
+        "green": true,
+        "pink": false
+    },
+    "row8":{
+        "timing": 2500,
+        "red": false,
+        "blue": false,
+        "green": false,
+        "pink": true
+    },
+    "row9":{
+        "timing": 2750,
+        "red": false,
+        "blue": false,
+        "green": false,
+        "pink": true
+    },
+    "row10":{
+        "timing": 3000,
+        "red": false,
+        "blue": false,
+        "green": true,
+        "pink": false
+    },
+    "row11":{
+        "timing": 3250,
+        "red": false,
+        "blue": true,
+        "green": false,
+        "pink": false
+    },
+    "row12":{
+        "timing": 3500,
+        "red": true,
+        "blue": false,
+        "green": false,
+        "pink": false
+    }
+}
