@@ -4,8 +4,9 @@
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    background-color: #030303;
-    background-image: url('./galaxy.jpg'), url('./stars.png');
+    background-color: rgba(3, 3, 3, 0.5);
+    background: linear-gradient(rgba(49, 44, 44, 0.5), rgba(49, 44, 44, 0.5)), 
+                url('./galaxy.jpg');
     background-size: cover, cover; /* Makes images cover the screen */
     background-position: center, center;
     background-repeat: no-repeat, no-repeat;
@@ -17,7 +18,7 @@
     z-index: 1;
 }
 
-.d_e_m_o, .game {
+.d_e_m_o, .game, .SetBod{
     z-index: 2;
     opacity: 0;
     position: absolute;

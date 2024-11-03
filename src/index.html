@@ -16,8 +16,8 @@
         <div class="content">
             <div class="Title">Dance Dance Revolution</div>
             <button class="Play" id="Play">PLAY</button> <!-- Converted to button -->
-            <button class="Demo">DEMO</button>  <!-- <div class="Demo">DEMO</div> -->
-            <button class="Settings">SETTINGS</button> <!-- Converted to button -->
+            <button class="Demo" id="Demo">DEMO</button>  <!-- <div class="Demo">DEMO</div> -->
+            <button class="Settings" id="Settings">SETTINGS</button> <!-- Converted to button -->
         </div>
     </div>
 
@@ -35,6 +35,19 @@
         <canvas id="canvasOutput" class="d_e_m_o game" width="640" height="480"></canvas> <!-- For input stream with squares -->
         <canvas id="canvasMask" class="d_e_m_o" width="640" height="480"></canvas> <!-- For background mask -->
         <canvas class="webgl d_e_m_o game"></canvas>
+    </div>
+
+    <div class="SetBod">
+        <div class="content" style="width: 1980px; height: 1080px; position: relative">
+            <div class="Black" style="width: 1980px; height: 1080px; left: 0px; top: 0px; position: absolute; background: #030303"></div>
+            <img class="Stars" style="width: 1980px; height: 1080px; left: 0px; top: 0px; position: absolute" src="./stars.png" />
+            <div class="Rectangle9" style="width: 652px; height: 789px; left: 164px; top: 177px; position: absolute; background: linear-gradient(180deg, rgba(221.85, 129.41, 212.61, 0.80) 0%, rgba(134.30, 8.51, 121.72, 0.80) 52%, rgba(62.89, 28.25, 59.42, 0.80) 100%); border-radius: 15px"></div>
+            <div class="Rectangle10" style="width: 652px; height: 789px; left: 1097px; top: 177px; position: absolute; background: linear-gradient(180deg, rgba(221.85, 129.41, 212.61, 0.80) 0%, rgba(134.30, 8.51, 121.72, 0.80) 52%, rgba(62.89, 28.25, 59.42, 0.80) 100%); border-radius: 15px"></div>
+            <div class="Language" style="left: 225px; top: 139px; position: absolute; color: black; font-size: 96px; font-family: Inknut Antiqua; font-weight: 700; word-wrap: break-word">Language</div>
+            <div class="English" style="left: 351px; top: 387px; position: absolute; color: black; font-size: 64px; font-family: Inknut Antiqua; font-weight: 900; word-wrap: break-word">English</div>
+            <div class="NdLanguage" style="left: 310px; top: 635px; position: absolute; color: black; font-size: 48px; font-family: Inknut Antiqua; font-weight: 700; word-wrap: break-word">2nd language</div>
+            <div class="Volume" style="left: 1216px; top: 139px; position: absolute; color: black; font-size: 96px; font-family: Inknut Antiqua; font-weight: 700; word-wrap: break-word">Volume</div>
+          </div>
     </div>
 
     <!-- Link external JavaScript files -->
