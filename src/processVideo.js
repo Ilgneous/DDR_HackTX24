@@ -1,3 +1,12 @@
+// Detection status object accessible globally
+window.detectionStatus = {
+    greenLeft: false,
+    greenRight: false,
+    blueLeft: false,
+    blueRight: false
+};
+
+
 function onVideoLoaded() {
     let video = document.getElementById('videoInput');
     let canvasOutput = document.getElementById('canvasOutput');
@@ -10,11 +19,15 @@ function onVideoLoaded() {
     let fgbg = new cv.BackgroundSubtractorMOG2(history=500, varThreshold=40, detectShadows=false);
 
     const FPS = 30;
+    const whitePixelRatioThreshold = 0.11; // Adjust this ratio threshold as needed
 
     function processVideo() {
         try {
             // Capture frame from video stream
             cap.read(frame);
+
+            // Flip the frame horizontally
+            cv.flip(frame, frame, 1); // flipCode = 1 for horizontal flip
 
             // Draw two outer red squares on the input frame
             let squareSize = 50; // Size of the square
@@ -88,12 +101,22 @@ function onVideoLoaded() {
                 let roi = fgmask.roi(new cv.Rect(x, y, size, size));
                 let contours = new cv.MatVector();
                 let hierarchy = new cv.Mat();
+
+                // Count white pixels in ROI
+                let whitePixels = cv.countNonZero(roi);
+                let totalPixels = roi.rows * roi.cols;
+                let whitePixelRatio = whitePixels / totalPixels;
                 
                 // Find contours in ROI
                 cv.findContours(roi, contours, hierarchy, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE);
 
                 // Check if any contours are detected in ROI
-                let objectDetected = contours.size() > 10;
+                // Check if any contours are detected in ROI
+                let objectDetectedContours = contours.size() > 10;
+                let objectDetectedWhiteRatio = whitePixelRatio > whitePixelRatioThreshold;
+                let objectDetected = objectDetectedContours && objectDetectedWhiteRatio;
+                window.detectionStatus[key] = objectDetected; // Update global detection status object
+
                 //console.log(`${key} object detected: ${objectDetected}`);
 
                 // Draw rectangle on original frame based on detection status
@@ -119,3 +142,18 @@ function onVideoLoaded() {
     // Start processing
     processVideo();
 }
+
+// Accessing Detection Status in Another File
+
+// // Assuming this is running after onVideoLoaded() has started
+// function checkDetectionStatus() {
+//     console.log("Current detection status:", window.detectionStatus);
+
+//     if (window.detectionStatus.greenLeft) {
+//         console.log("Object detected in greenLeft ROI");
+//     }
+//     // Repeat checks for other ROIs as needed
+// }
+
+// // Call `checkDetectionStatus` as needed, or use setInterval to poll the status
+// setInterval(checkDetectionStatus, 500); // Poll every 500ms, for example
