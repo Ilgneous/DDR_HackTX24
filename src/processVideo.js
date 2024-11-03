@@ -30,7 +30,7 @@ function onVideoLoaded() {
             cv.flip(frame, frame, 1); // flipCode = 1 for horizontal flip
 
             // Draw two outer red squares on the input frame
-            let squareSize = 50; // Size of the square
+            let squareSize = 100; // Size of the square
             let spaceBetween = 5; // Space between squares (width)
             let spaceBetweenStacks = 50; // Space between the two stacks
 
