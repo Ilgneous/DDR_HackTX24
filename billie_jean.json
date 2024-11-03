@@ -1,0 +1,149 @@
+{
+    "row1":{
+        "timing": 500,
+        "red": true,
+        "blue": false,
+        "green": false,
+        "pink": false
+    },
+    "row2":{
+        "timing": 1000,
+        "red": false,
+        "blue": true,
+        "green": false,
+        "pink": false
+    },
+    "row3":{
+        "timing": 1500,
+        "red": true,
+        "blue": false,
+        "green": false,
+        "pink": false
+    },
+    "row4":{
+        "timing": 2000,
+        "red": false,
+        "blue": true,
+        "green": false,
+        "pink": false
+    },
+    "row5":{
+        "timing": 2500,
+        "red": true,
+        "blue": false,
+        "green": false,
+        "pink": false
+    },
+    "row6":{
+        "timing": 3000,
+        "red": false,
+        "blue": true,
+        "green": false,
+        "pink": false
+    },
+    "row7":{
+        "timing": 3500,
+        "red": true,
+        "blue": false,
+        "green": false,
+        "pink": false
+    },
+    "row8":{
+        "timing": 4000,
+        "red": false,
+        "blue": true,
+        "green": false,
+        "pink": false
+    },
+    "row9":{
+        "timing": 4250,
+        "red": true,
+        "blue": false,
+        "green": true,
+        "pink": false
+    },
+    "row10":{
+        "timing": 4500,
+        "red": true,
+        "blue": false,
+        "green": false,
+        "pink": false
+    },
+    "row11":{
+        "timing": 4750,
+        "red": true,
+        "blue": false,
+        "green": false,
+        "pink": false
+    },
+    "row12":{
+        "timing": 5000,
+        "red": true,
+        "blue": false,
+        "green": true,
+        "pink": false
+    },
+    "row13":{
+        "timing": 5250,
+        "red": true,
+        "blue": false,
+        "green": false,
+        "pink": false
+    },
+    "row14":{
+        "timing": 5500,
+        "red": true,
+        "blue": false,
+        "green": false,
+        "pink": false
+    },
+    "row15":{
+        "timing": 5750,
+        "red": true,
+        "blue": false,
+        "green": true,
+        "pink": false
+    },
+    "row16":{
+        "timing": 6000,
+        "red": true,
+        "blue": false,
+        "green": false,
+        "pink": false
+    },
+    "row17":{
+        "timing": 6250,
+        "red": true,
+        "blue": false,
+        "green": false,
+        "pink": false
+    },
+    "row18":{
+        "timing": 6500,
+        "red": true,
+        "blue": false,
+        "green": true,
+        "pink": false
+    },
+    "row19":{
+        "timing": 6750,
+        "red": true,
+        "blue": false,
+        "green": false,
+        "pink": false
+    },
+    "row20":{
+        "timing": 7000,
+        "red": true,
+        "blue": false,
+        "green": false,
+        "pink": false
+    },
+    "row21":{
+        "timing": 7250,
+        "red": true,
+        "blue": false,
+        "green": true,
+        "pink": false
+    }
+}
