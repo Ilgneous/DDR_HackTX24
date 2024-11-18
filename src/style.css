@@ -148,6 +148,16 @@ button {
     text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5); /* Text shadow for depth */
 }
 
+.lil-gui {
+    /* position: fixed !important; Make sure the position is fixed */
+    bottom: 20px !important;    /* Distance from the bottom */
+    left: 60px !important;     /* Distance from the right */
+    top: auto !important;       /* Override top if set */
+    right: auto !important;      /* Override left if set */
+    width: 200px !important;     /* Prevent resizing issues */
+    height: auto !important;    /* Ensure the height is not stretched */
+  }
+
 /* Bounce animation for the title */
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
